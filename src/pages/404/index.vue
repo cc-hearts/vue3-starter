@@ -28,9 +28,12 @@ function goBack() {
   margin: auto;
   display: flex;
   text-align: center;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
 }
 .not-found > div > div {
-  margin: 0 45px;
+  margin: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
