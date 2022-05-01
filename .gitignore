@@ -1,0 +1,9 @@
+node_modules
+.temp
+.cache
+
+/dist/
+
+.idea
+.vscode
+.lock
