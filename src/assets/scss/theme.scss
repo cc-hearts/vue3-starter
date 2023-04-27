@@ -1,0 +1,18 @@
+:root {
+  --text-color: #303133;
+  --bg-color: #ffffff;
+}
+
+:root.dark {
+  --text-color: #e5eaf3;
+  --bg-color: #141414;
+}
+
+html {
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  transition: background-color 0.2s ease;
+}

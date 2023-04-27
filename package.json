@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cc-heart/eslint-config": "^0.0.5",
+    "@cc-heart/utils": "^2.0.11",
+    "sass": "^1.62.1",
+    "unocss": "^0.51.8",
     "vue": "^3.2.47"
   },
   "devDependencies": {
