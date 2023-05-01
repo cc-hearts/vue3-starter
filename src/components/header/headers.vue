@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { usePrefixCls } from '@/hooks';
-import ToggleDark from '../switch/toggleDark.vue';
-const headerCLs = usePrefixCls('header')
+import { GithubIcon } from '@/icons';
+import ToggleDark from '@/components/switch/toggleDark.vue';
+const headerCls = usePrefixCls('header')
 </script>
 
 <template>
-  <header class="flex justify-between items-center px-3" :class="[headerCLs]">
-    <div></div>
-    <div>
+  <header class="flex justify-between items-center px-3" :class="[headerCls]">
+    <slot name="left">
+      <div></div>
+    </slot>
+    <div class="flex text-2xl items-center" :class="[`${headerCls}__icon`]">
+      <slot name="right-icon"></slot>
+      <GithubIcon />
       <ToggleDark />
     </div>
   </header>
@@ -20,6 +25,26 @@ const headerCLs = usePrefixCls('header')
   --header-shadow: rgb(229, 230, 235);
   height: 60px;
   box-shadow: 0 1px 0 var(--header-shadow);
+
+  &__icon {
+
+    color: var(--color-text-2);
+
+    &>div,
+    &>button,
+    &>svg {
+      margin: 0 0.5rem;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-text-1);
+      }
+    }
+  }
 }
 
 .dark .#{var.$prefixCls}-header {
