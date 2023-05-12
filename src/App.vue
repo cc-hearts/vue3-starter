@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import Headers from './components/header/headers.vue';
+import Headers from '@/components/header/headers.vue';
+import Home from '@/layouts/home'
 </script>
 
 <template>
-  <headers />
+  <Headers />
+  <Home>
+  </Home>
 </template>
 
 <style lang="scss">
