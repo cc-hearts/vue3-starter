@@ -2,7 +2,7 @@ import { App } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "~pages";
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
