@@ -1,0 +1,39 @@
+@use '../var/variable.scss' as *;
+
+$b: null;
+$e: null;
+$m: null;
+
+@mixin b($block) {
+  $b: #{$prefixCls}#{$common-separator}#{$block} !global; // 局部变量
+
+  .#{$b} {
+    @content;
+  }
+}
+
+@mixin e($element...) {
+  $e: #{$b} !global;
+  $currentSelector: '';
+  @each $item in $element {
+    $currentSelector: #{$currentSelector} + '.' + #{$e} + #{$element-separator} + #{$item} + ',';
+  }
+
+    @at-root {
+       #{$currentSelector} {
+        @content;
+      }
+    }
+}
+
+@mixin m($modify) {
+  $m: #{$e}#{$modifier-separator}#{$modify};
+  $currentSelector: '';
+
+  @each $unit in $modify {
+    $currentSelector: #{$currentSelector} + '.' + #{$m} + #{$modifier-separator} + #{$unit} + ',';
+  }
+  .#{$currentSelector} {
+    @content;
+  }
+}

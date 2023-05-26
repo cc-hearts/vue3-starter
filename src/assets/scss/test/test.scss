@@ -1,0 +1,10 @@
+@use '../common/function' as *;
+@use '../common/mixins' as *;
+
+@include b('data') {
+  color: red;
+
+  @include e('ss', 'ee') {
+    background-color: red;
+  }
+}
