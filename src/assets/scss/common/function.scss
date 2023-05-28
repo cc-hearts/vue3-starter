@@ -1,7 +1,7 @@
 @use '../var/variable.scss' as *;
 
 @function joinVar($args...) {
-  $namespaces: --#{$prefixCls};
+  $namespaces: --#{$namespace};
 
   @each $item in $args {
     $namespaces: #{$namespaces}-#{$item};

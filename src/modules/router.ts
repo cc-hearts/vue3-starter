@@ -1,14 +1,16 @@
+import { isDev } from "@/configs";
 import { App } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "~pages";
 
 export const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
-
+  routes,
+});
 
 export const setup = ({ app }: { app: App }) => {
-  console.log(routes);
-  app.use(router)
-}
+  if (isDev) {
+    console.log(routes);
+  }
+  app.use(router);
+};
