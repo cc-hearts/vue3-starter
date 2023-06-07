@@ -26,7 +26,12 @@ $m: null;
   $e: #{$b} !global;
   $currentSelector: '';
   @each $item in $element {
-    $currentSelector: #{$currentSelector} + '.' + #{$e} + #{$element-separator} + #{$item} + ',';
+    $currentSelector: #{$currentSelector} +
+      '.' +
+      #{$e} +
+      #{$element-separator} +
+      #{$item} +
+      ',';
   }
 
   @include isAtRoot {
@@ -36,13 +41,17 @@ $m: null;
   }
 }
 
-
 @mixin m($modify) {
   $m: #{$e}#{$modifier-separator}#{$modify};
   $currentSelector: '';
 
   @each $unit in $modify {
-    $currentSelector: #{$currentSelector} + '.' + #{$m} + #{$modifier-separator} + #{$unit} + ',';
+    $currentSelector: #{$currentSelector} +
+      '.' +
+      #{$m} +
+      #{$modifier-separator} +
+      #{$unit} +
+      ',';
   }
 
   @include isAtRoot {
@@ -50,5 +59,4 @@ $m: null;
       @content;
     }
   }
-
 }

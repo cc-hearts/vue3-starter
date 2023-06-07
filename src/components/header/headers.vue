@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useNamespace } from "@/hooks";
-import { GithubIcon } from "@/icons";
-import { githubUrl } from "@/configs";
-import ToggleDark from "@/components/switch/toggleDark.vue";
-const ns = useNamespace("header");
+import { useNamespace } from '@/hooks'
+import { GithubIcon } from '@/icons'
+import { githubUrl } from '@/configs'
+import SwitchTheme from './switchTheme.vue'
+const ns = useNamespace('header')
 const toGithub = () => {
-  if (githubUrl) window.open(githubUrl);
-};
+  if (githubUrl) window.open(githubUrl)
+}
 </script>
 
 <template>
@@ -17,16 +17,16 @@ const toGithub = () => {
     <div class="flex text-2xl items-center" :class="[ns.e('icon')]">
       <slot name="right-icon"></slot>
       <GithubIcon @click="toGithub" />
-      <ToggleDark />
+      <SwitchTheme />
     </div>
   </header>
 </template>
 
 <style lang="scss">
-@use "@/assets/scss/var/variable.scss" as *;
-@use "@/assets/scss/common/mixins.scss" as *;
+@use '@/assets/scss/var/variable.scss' as *;
+@use '@/assets/scss/common/mixins.scss' as *;
 
-@include b("header") {
+@include b('header') {
   --header-shadow: rgb(229, 230, 235);
   height: 60px;
   box-shadow: 0 1px 0 var(--header-shadow);
@@ -52,7 +52,7 @@ const toGithub = () => {
 }
 
 .dark {
-  @include b("header") {
+  @include b('header') {
     --header-shadow: rgb(72, 72, 73);
   }
 }

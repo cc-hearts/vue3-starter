@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import Headers from '@/components/header/headers.vue';
+import Headers from '@/components/header/headers.vue'
 import Home from '@/layouts/home'
 </script>
 
 <template>
   <Headers />
-  <Home>
-  </Home>
+  <Home> </Home>
 </template>
 
 <style lang="scss">
@@ -15,7 +14,6 @@ import Home from '@/layouts/home'
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body,
 html,
