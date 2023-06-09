@@ -4,11 +4,7 @@ export function useToggleDark() {
   const el = document.documentElement
   const token = el.classList
   const hasDarkClassName = token.contains(THEME.DARK)
-  if (hasDarkClassName) {
-    token.remove(THEME.DARK)
-  } else {
-    token.add(THEME.LIGHT)
-  }
+  token[hasDarkClassName ? 'remove' : 'add'](THEME.DARK)
   isDark.value = !isDark.value
   setTheme(isDark.value ? THEME.DARK : THEME.LIGHT)
 }
