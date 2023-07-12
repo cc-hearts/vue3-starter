@@ -10,7 +10,7 @@ const toGithub = () => {
 </script>
 
 <template>
-  <header class="flex justify-between items-center px-3" :class="[ns.cls]">
+  <header class="flex justify-between items-center px-3 shrink-0" :class="[ns.cls]">
     <slot name="left">
       <div></div>
     </slot>
