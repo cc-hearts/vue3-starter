@@ -1,18 +1,9 @@
-# Vue 3 + TypeScript + Vite
+# Vue3-Stater
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue3-Stater 是一个基于 Vue 3 的模板项目，旨在提供一个集成了多种插件的开箱即用的 Vue 3 应用程序模板。
 
-## Recommended IDE Setup
+## 功能特点
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- ✨ Markdown 转换为页面：将 Markdown 文件转换为美观的页面，并支持在 Vue 3 应用程序中展示。
+- ✏️ 支持 TSX 编写：使用 TypeScript 和 JSX 的组合编写方式，为您提供更强大的类型检查和编码体验。
+- 🌍 支持多语言配置：轻松地配置和管理多语言内容，使您的 Vue 3 应用程序具备国际化能力。
