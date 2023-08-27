@@ -8,11 +8,16 @@ import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-vue-markdown'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
+import AutoImport from 'unplugin-auto-import/vite'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
+    }),
+    AutoImport({
+      imports: ['vue'],
     }),
     vueJsx(),
     UnoCSS(),

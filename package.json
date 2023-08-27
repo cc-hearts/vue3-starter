@@ -1,7 +1,7 @@
 {
   "name": "vue3-starter",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -38,6 +38,7 @@
     "vite": "^4.4.9",
     "vite-plugin-pages": "^0.29.1",
     "vite-plugin-vue-markdown": "^0.23.8",
+    "unplugin-auto-import": "^0.16.6",
     "vue-tsc": "^1.8.8"
   },
   "lint-staged": {
