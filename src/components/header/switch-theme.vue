@@ -1,36 +1,32 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { useIsDark, useToggleDark, useNamespace } from '@/hooks'
-import { SunIcon, MoonIcon } from '@/icons'
-const checked = ref(false)
+import { THEME } from '@/configs'
+import { useCssNamespace, useTheme, useToggleTheme } from '@/hooks'
+import { MoonIcon, SunIcon } from '@/icons'
+import { computed } from 'vue'
+
+const cssNs = useCssNamespace('appearance')
+const [theme] = useTheme()
+
 function handleToggleTheme() {
-  useToggleDark()
-  toggleChecked()
+  useToggleTheme()
 }
-
-const ns = useNamespace('appearance')
-
-function toggleChecked() {
-  checked.value = useIsDark()
-}
-
-onMounted(() => {
-  toggleChecked()
+const checked = computed(() => {
+  return theme.value === THEME.DARK
 })
 </script>
 
 <template>
-  <div class="flex" :class="[ns.cls]">
+  <div class="flex" :class="[cssNs.cls]">
     <button
       role="switch"
       class="relative block shrink-0 outline-0"
       :aria-checked="checked"
       @click="handleToggleTheme"
     >
-      <span :class="[ns.e('check')]">
+      <span :class="[cssNs.e('check')]">
         <span
           class="relative block overflow-hidden rounded-full"
-          :class="[ns.e('icon')]"
+          :class="[cssNs.e('icon')]"
         >
           <SunIcon />
           <MoonIcon />
@@ -43,14 +39,14 @@ onMounted(() => {
 <style lang="scss">
 @use '@/assets/scss/var/variable.scss' as *;
 @use '@/assets/scss/common/mixins.scss' as *;
+@use '@/assets/scss/common/function.scss' as *;
 
 .dark {
   @include b('appearance') {
     --switch-border-divider: #545454a6;
-    --switch-bg-color: #3a3a3a;
+    --switch-bg-color: #3b3b3b;
     --switch-checked-color: #1a1a1a;
-    --switch-box-shadow-1: --switch-bg-color;
-    --switch-fill-svg: rgba(255, 255, 255, 0.87);
+    --switch-fill-svg: #ffffffde;
   }
 }
 
@@ -58,8 +54,7 @@ onMounted(() => {
   --switch-border-divider: #3c3c3c4a;
   --switch-bg-color: #f1f1f1;
   --switch-checked-color: #fff;
-  --switch-box-shadow-1: --switch-bg-color;
-  --switch-fill-svg: rgba(60, 60, 60, 0.7);
+  --switch-fill-svg: #3c3c3cb3;
   --switch-translate-x: 18px;
 
   button {
@@ -73,6 +68,7 @@ onMounted(() => {
 
     &[aria-checked='true'] {
       $is-at-root: false !global;
+
       @include e('check') {
         transform: translate(var(--switch-translate-x));
       }

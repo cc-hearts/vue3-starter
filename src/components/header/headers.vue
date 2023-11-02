@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import { useNamespace } from '@/hooks'
-import { GithubIcon } from '@/icons'
 import { githubUrl } from '@/configs'
-import SwitchTheme from './switchTheme.vue'
-const ns = useNamespace('header')
-const toGithub = () => {
-  if (githubUrl) window.open(githubUrl)
-}
+import { useCssNamespace } from '@/hooks'
+import { GithubIcon } from '@/icons'
+import SwitchTheme from './switch-theme.vue'
+
+const cssNs = useCssNamespace('header')
+
+const toGithub = () => githubUrl && window.open(githubUrl)
 </script>
 
 <template>
-  <header class="flex justify-between items-center px-3 shrink-0" :class="[ns.cls]">
+  <header
+    class="flex justify-between items-center px-3 shrink-0"
+    :class="[cssNs.cls]"
+  >
     <slot name="left">
       <div></div>
     </slot>
-    <div class="flex text-2xl items-center" :class="[ns.e('icon')]">
+    <div class="flex text-2xl items-center" :class="[cssNs.e('icon')]">
       <slot name="right-icon"></slot>
       <GithubIcon @click="toGithub" />
       <SwitchTheme />
@@ -25,14 +28,14 @@ const toGithub = () => {
 <style lang="scss">
 @use '@/assets/scss/var/variable.scss' as *;
 @use '@/assets/scss/common/mixins.scss' as *;
+@use '@/assets/scss/common/function.scss' as *;
 
 @include b('header') {
-  --header-shadow: rgb(229, 230, 235);
   height: 60px;
-  box-shadow: 0 1px 0 var(--header-shadow);
+  box-shadow: 0 1px 0 getCssVar('colorFill');
 
   &__icon {
-    color: var(--color-text-2);
+    color: getCssVar('colorTextSecondary');
 
     & > div,
     & > button,
@@ -45,15 +48,9 @@ const toGithub = () => {
       transition: color 0.3s;
 
       &:hover {
-        color: var(--color-text-1);
+        color: getCssVar('colorText');
       }
     }
-  }
-}
-
-.dark {
-  @include b('header') {
-    --header-shadow: rgb(72, 72, 73);
   }
 }
 </style>

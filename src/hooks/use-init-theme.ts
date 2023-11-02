@@ -1,12 +1,13 @@
-import { isDark } from '@/configs'
 import { getTheme } from '@/storage'
+import { useTheme } from './use-theme'
+import { THEME } from '@/configs'
+
 export function useInitTheme() {
   if (typeof document !== 'undefined') {
-    const classList = document.documentElement.classList
     const transition = document.body.style.transition
     document.body.style.transition = 'none'
-    isDark.value = getTheme() === 'dark'
-    isDark.value ? classList.add('dark') : classList.remove('dark')
+    const [, setThemeRef] = useTheme()
+    setThemeRef(getTheme() === THEME.DARK ? THEME.DARK : THEME.LIGHT)
     document.body.offsetHeight // 回流
     document.body.style.transition = transition
   }

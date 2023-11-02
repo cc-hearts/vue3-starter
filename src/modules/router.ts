@@ -1,4 +1,4 @@
-import { isDev } from '@/configs'
+import { __IS_DEV__ } from '@/configs'
 import { App } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import routes from '~pages'
@@ -9,7 +9,7 @@ export const router = createRouter({
 })
 
 export const setup = ({ app }: { app: App }) => {
-  if (isDev) {
+  if (__IS_DEV__) {
     console.log(routes)
   }
   app.use(router)
