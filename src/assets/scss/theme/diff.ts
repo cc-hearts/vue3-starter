@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
+// analyze repeated theme variable
 function readThemeList(path: string) {
   const themeCtx = readFileSync(path, 'utf-8')
   const reg = /:root {[\s\S]*}/gm
