@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'uno.css'
-import '@/assets/scss/theme.scss'
+import '@/assets/scss/index.scss'
 import './main.css'
 import './modules/i18n'
 import { useInitTheme } from '@/hooks'

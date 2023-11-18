@@ -1,5 +1,5 @@
 
-@use '@/assets/scss/var/variable.scss' as *;
+@use '@/assets/scss/variables/variable.scss' as *;
 
 :root.dark {
   --#{$namespace}-colorPrimary: #1668dc;

@@ -26,9 +26,9 @@ const toGithub = () => githubUrl && window.open(githubUrl)
 </template>
 
 <style lang="scss">
-@use '@/assets/scss/var/variable.scss' as *;
-@use '@/assets/scss/common/mixins.scss' as *;
-@use '@/assets/scss/common/function.scss' as *;
+@use '@/assets/scss/variables/variable.scss' as *;
+@use '@/assets/scss/mixins/bem.scss' as *;
+@use '@/assets/scss/functions/variable.scss' as *;
 
 @include b('header') {
   height: 60px;

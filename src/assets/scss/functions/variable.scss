@@ -1,4 +1,4 @@
-@use '../var/variable.scss' as *;
+@use '../variables/variable.scss' as *;
 
 @function joinVar($args...) {
   $namespaces: --#{$namespace};
