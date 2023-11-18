@@ -2,20 +2,23 @@
 
 :root {
   --#{$namespace}-blue: #1677ff;
-  --#{$namespace}-purple: #722ED1;
-  --#{$namespace}-cyan: #13C2C2;
-  --#{$namespace}-green: #52C41A;
-  --#{$namespace}-magenta: #EB2F96;
+  --#{$namespace}-purple: #722ed1;
+  --#{$namespace}-cyan: #13c2c2;
+  --#{$namespace}-green: #52c41a;
+  --#{$namespace}-magenta: #eb2f96;
   --#{$namespace}-pink: #eb2f96;
-  --#{$namespace}-red: #F5222D;
-  --#{$namespace}-orange: #FA8C16;
-  --#{$namespace}-yellow: #FADB14;
-  --#{$namespace}-volcano: #FA541C;
-  --#{$namespace}-geekblue: #2F54EB;
-  --#{$namespace}-gold: #FAAD14;
-  --#{$namespace}-lime: #A0D911;
-  --#{$namespace}-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --#{$namespace}-fontFamilyCode: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --#{$namespace}-red: #f5222d;
+  --#{$namespace}-orange: #fa8c16;
+  --#{$namespace}-yellow: #fadb14;
+  --#{$namespace}-volcano: #fa541c;
+  --#{$namespace}-geekblue: #2f54eb;
+  --#{$namespace}-gold: #faad14;
+  --#{$namespace}-lime: #a0d911;
+  --#{$namespace}-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --#{$namespace}-fontFamilyCode: 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, Courier, monospace;
   --#{$namespace}-fontSize: 14;
   --#{$namespace}-lineWidth: 1;
   --#{$namespace}-lineType: solid;
@@ -110,9 +113,12 @@
   --#{$namespace}-marginLG: 24;
   --#{$namespace}-marginXL: 32;
   --#{$namespace}-marginXXL: 48;
-  --#{$namespace}-boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowTertiary: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  --#{$namespace}-boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowTertiary: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+    0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
   --#{$namespace}-screenXS: 480;
   --#{$namespace}-screenXSMin: 480;
   --#{$namespace}-screenXSMax: 575;
@@ -131,13 +137,20 @@
   --#{$namespace}-screenXXL: 1600;
   --#{$namespace}-screenXXLMin: 1600;
   --#{$namespace}-boxShadowPopoverArrow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowCard: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
-  --#{$namespace}-boxShadowDrawerRight: -6px 0 16px 0 rgba(0, 0, 0, 0.08), -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowDrawerLeft: 6px 0 16px 0 rgba(0, 0, 0, 0.08), 3px 0 6px -4px rgba(0, 0, 0, 0.12), 9px 0 28px 8px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowDrawerUp: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --#{$namespace}-boxShadowDrawerDown: 0 -6px 16px 0 rgba(0, 0, 0, 0.08), 0 -3px 6px -4px rgba(0, 0, 0, 0.12), 0 -9px 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowCard: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  --#{$namespace}-boxShadowDrawerRight: -6px 0 16px 0 rgba(0, 0, 0, 0.08),
+    -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowDrawerLeft: 6px 0 16px 0 rgba(0, 0, 0, 0.08),
+    3px 0 6px -4px rgba(0, 0, 0, 0.12), 9px 0 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowDrawerUp: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --#{$namespace}-boxShadowDrawerDown: 0 -6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 -3px 6px -4px rgba(0, 0, 0, 0.12), 0 -9px 28px 8px rgba(0, 0, 0, 0.05);
   --#{$namespace}-boxShadowTabsOverflowLeft: inset 10px 0 8px -8px rgba(0, 0, 0, 0.08);
-  --#{$namespace}-boxShadowTabsOverflowRight: inset -10px 0 8px -8px rgba(0, 0, 0, 0.08);
+  --#{$namespace}-boxShadowTabsOverflowRight: inset -10px 0 8px -8px
+    rgba(0, 0, 0, 0.08);
   --#{$namespace}-boxShadowTabsOverflowTop: inset 0 10px 8px -8px rgba(0, 0, 0, 0.08);
-  --#{$namespace}-boxShadowTabsOverflowBottom: inset 0 -10px 8px -8px rgba(0, 0, 0, 0.08);
+  --#{$namespace}-boxShadowTabsOverflowBottom: inset 0 -10px 8px -8px
+    rgba(0, 0, 0, 0.08);
 }

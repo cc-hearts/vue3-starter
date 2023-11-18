@@ -1,8 +1,8 @@
-@use "sass:string";
+@use 'sass:string';
 
 @function join($el...) {
   $temp_var_length: 0;
-  $temp_var: "";
+  $temp_var: '';
   $len: 0;
 
   @each $item in $el {
