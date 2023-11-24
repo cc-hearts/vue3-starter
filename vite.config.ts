@@ -16,7 +16,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     AutoImport({
-      imports: ['vue'],
+      imports: ['vue', 'vue-router'],
     }),
     vueJsx(),
     UnoCSS(),
