@@ -1,5 +1,5 @@
-export * from './use-css-namespace'
-export * from './use-init-theme'
+export * from '../utils/define-css-namespace'
+export * from '../utils/init-theme'
 export * from './use-props'
 export * from './use-theme'
 export * from './use-toggle-theme'

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { THEME } from '@/configs'
-import { useCssNamespace, useTheme, useToggleTheme } from '@/hooks'
+import { defineCssNamespace, useTheme, useToggleTheme } from '@/hooks'
 import { MoonIcon, SunIcon } from '@/icons'
 import { computed } from 'vue'
 
-const cssNs = useCssNamespace('appearance')
+const cssNs = defineCssNamespace('appearance')
 const [theme] = useTheme()
 
 function handleToggleTheme() {

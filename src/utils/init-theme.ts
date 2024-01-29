@@ -1,8 +1,8 @@
 import { getTheme } from '@/storage'
-import { useTheme } from './use-theme'
+import { useTheme } from '../hooks/use-theme'
 import { THEME } from '@/configs'
 
-export function useInitTheme() {
+export function initTheme() {
   if (typeof document !== 'undefined') {
     const transition = document.body.style.transition
     document.body.style.transition = 'none'

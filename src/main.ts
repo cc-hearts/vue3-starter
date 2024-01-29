@@ -4,9 +4,9 @@ import 'uno.css'
 import '@/assets/scss/index.scss'
 import './main.css'
 import './modules/i18n'
-import { useInitTheme } from '@/hooks'
+import { initTheme } from '@/hooks'
 
-useInitTheme()
+initTheme()
 
 const app = createApp(App)
 

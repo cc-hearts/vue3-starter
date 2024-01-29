@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { githubUrl } from '@/configs'
-import { useCssNamespace } from '@/hooks'
+import { defineCssNamespace } from '@/hooks'
 import { GithubIcon } from '@/icons'
 import SwitchTheme from './switch-theme.vue'
 
-const cssNs = useCssNamespace('header')
+const cssNs = defineCssNamespace('header')
 
 const toGithub = () => githubUrl && window.open(githubUrl)
 </script>

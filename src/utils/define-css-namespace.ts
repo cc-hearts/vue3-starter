@@ -1,13 +1,14 @@
 import { defaultNamespace } from '@/configs'
 
-export function useDerivedNamespace(ns?: string) {
+export function defineDerivedNamespace(ns?: string) {
   return ns || defaultNamespace
 }
-export function useCssNamespace(
+
+export function defineCssNamespace(
   block?: string | number,
   overrideNamespace?: string
 ) {
-  const ns = useDerivedNamespace(overrideNamespace)
+  const ns = defineDerivedNamespace(overrideNamespace)
   const cls = block ? `${ns}-${block}` : ns
 
   const b = (blockSuffix?: string) => {
@@ -71,4 +72,4 @@ export function useCssNamespace(
   }
 }
 
-export type useCssNamespace = ReturnType<typeof useCssNamespace>
+export type useCssNamespace = ReturnType<typeof defineCssNamespace>

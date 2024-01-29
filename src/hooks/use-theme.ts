@@ -1,8 +1,8 @@
 import { ref } from 'vue'
-import { useOnce } from './use-once'
+import { defineOnceFn } from '@cc-heart/utils'
 import { THEME } from '@/configs/constants'
 
-export const useTheme = useOnce(() => {
+export const useTheme = defineOnceFn(() => {
   const classList = document.documentElement.classList
   const themeRef = ref(
     classList.contains(THEME.DARK) ? THEME.DARK : THEME.LIGHT
