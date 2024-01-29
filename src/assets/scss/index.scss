@@ -1,4 +1,6 @@
 @use '@/assets/scss/functions/variable.scss' as *;
+@use '@/assets/scss/theme/default.scss' as *;
+@use '@/assets/scss/theme/dark.scss' as *;
 
 html {
   color: getCssVar('colorText');

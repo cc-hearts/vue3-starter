@@ -5,6 +5,11 @@ import '@/assets/scss/index.scss'
 import './main.css'
 import './modules/i18n'
 import { initTheme } from '@/hooks'
+import { fn } from '@cc-heart/utils/helper'
+
+interface Modules {
+  setup: fn
+}
 
 initTheme()
 
@@ -12,9 +17,7 @@ const app = createApp(App)
 
 Object.entries(import.meta.glob('./modules/*.ts', { eager: true })).forEach(
   ([, Module]) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    Module.setup?.({ app })
+    ;(Module as Modules).setup?.({ app })
   }
 )
 

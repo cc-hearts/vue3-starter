@@ -8,7 +8,7 @@ export function initTheme() {
     document.body.style.transition = 'none'
     const [, setThemeRef] = useTheme()
     setThemeRef(getTheme() === THEME.DARK ? THEME.DARK : THEME.LIGHT)
-    document.body.offsetHeight // 回流
+    document.body.offsetHeight
     document.body.style.transition = transition
   }
 }

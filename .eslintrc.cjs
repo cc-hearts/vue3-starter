@@ -7,5 +7,5 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 'laster',
   },
-  ...autoImportPackage
+  ...autoImportPackage,
 }
