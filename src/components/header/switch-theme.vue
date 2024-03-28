@@ -37,9 +37,7 @@ const checked = computed(() => {
 </template>
 
 <style lang="scss">
-@use '@/assets/scss/variables/variable.scss' as *;
-@use '@/assets/scss/mixins/bem.scss' as *;
-@use '@/assets/scss/functions/variable.scss' as *;
+@use '@/assets/scss/lib.scss' as *;
 
 .dark {
   @include b('appearance') {

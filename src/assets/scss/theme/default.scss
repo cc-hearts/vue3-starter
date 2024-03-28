@@ -1,8 +1,0 @@
-@use '@/assets/scss/variables/variable.scss' as *;
-
-:root {
-  --#{$namespace}-colorText: rgba(0, 0, 0, 0.88);
-  --#{$namespace}-colorBgBase: #fff;
-  --#{$namespace}-colorFill: rgba(0, 0, 0, 0.15);
-  --#{$namespace}-colorTextSecondary: rgba(0, 0, 0, 0.65);
-}

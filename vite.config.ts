@@ -4,10 +4,10 @@ import UnoCSS from 'unocss/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Pages from 'vite-plugin-pages'
-import Markdown from 'vite-plugin-vue-markdown'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import AutoImport from 'unplugin-auto-import/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
