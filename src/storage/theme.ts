@@ -1,4 +1,5 @@
-import { THEME, THEME_KEY } from '@/configs'
+import type { THEME } from '@/configs'
+import { THEME_KEY } from '@/configs'
 
 export function setTheme(theme: THEME) {
   localStorage.setItem(THEME_KEY, theme)

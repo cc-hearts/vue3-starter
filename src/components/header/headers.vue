@@ -15,10 +15,10 @@ const toGithub = () => githubUrl && window.open(githubUrl)
     :class="[cssNs.cls]"
   >
     <slot name="left">
-      <div></div>
+      <div />
     </slot>
     <div class="flex text-2xl items-center" :class="[cssNs.e('icon')]">
-      <slot name="right-icon"></slot>
+      <slot name="right-icon" />
       <GithubIcon @click="toGithub" />
       <SwitchTheme />
     </div>
