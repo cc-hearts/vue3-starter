@@ -5,7 +5,7 @@ export default [
     typescript: true,
     autoImport: true,
     parserOptionsOverrides: {
-      project: ['./tsconfig.vue.json'],
+      project: false,
     },
   }),
   ...typescript({
