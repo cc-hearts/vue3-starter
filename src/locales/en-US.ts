@@ -6,7 +6,7 @@ Object.values(import.meta.glob('/src/**/locales/en-US.ts')).forEach(
     if (data && data.default) {
       Object.assign(enUsLocale, data.default)
     }
-  }
+  },
 )
 const common = {
   logout: 'Logout',

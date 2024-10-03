@@ -29,7 +29,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "uno.config.ts",
-    "auto-imports.d.ts"
+    "auto-imports.d.ts",
+    "vitest.config.ts"
   ],
   "references": [
     {
