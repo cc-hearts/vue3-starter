@@ -32,7 +32,7 @@ function handleInputChange(e: Event) {
         internalValue.value = (e.target as InputHTMLAttributes).value
         break
       case 'insertFromPaste': {
-        const code = inputRef.value?.value || ''
+        const code = inputRef.value!.value
         const value = code
           .split('')
           .filter((c) => /[0-9.]/.test(c))

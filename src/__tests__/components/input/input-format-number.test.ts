@@ -14,11 +14,11 @@ describe('InputFormatNumber components', () => {
     const wrapper = mount(InputFormatNumber)
     const inputEl = wrapper.find('input')
 
-    await inputEl.setValue('123456')
+    await inputEl.setValue('123456.789')
     inputEl.element.dispatchEvent(
       new InputEvent('input', { inputType: 'insertFromPaste' }),
     )
-    expect(inputEl.element.value).toBe('123,456')
+    expect(inputEl.element.value).toBe('123,456.789')
   })
 
   test('should format number correctly when inputting additional digits', async () => {
@@ -41,5 +41,22 @@ describe('InputFormatNumber components', () => {
       new InputEvent('input', { inputType: 'deleteContentBackward' }),
     )
     expect(inputEl.element.value).toBe('1,234')
+
+    await inputEl.setValue('123')
+    inputEl.element.dispatchEvent(
+      new InputEvent('input', { inputType: 'deleteSoftLineBackward' }),
+    )
+    expect(inputEl.element.value).toBe('123')
+  })
+
+  test('should format number correctly when cutting content', async () => {
+    const wrapper = mount(InputFormatNumber, { props: { value: '123,456' } })
+    const inputEl = wrapper.find('input')
+
+    await inputEl.setValue('')
+    inputEl.element.dispatchEvent(
+      new InputEvent('input', { inputType: 'deleteByCut' }),
+    )
+    expect(inputEl.element.value).toBe('')
   })
 })
