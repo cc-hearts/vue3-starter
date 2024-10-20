@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref, withDefaults, watch } from 'vue'
+import { onMounted, reactive, ref, watch } from 'vue'
 import type { Props } from './props'
 
 const props = withDefaults(defineProps<Props>(), {
@@ -92,19 +92,19 @@ onMounted(() => {
 <style lang="scss">
 .tab-bar {
   &-wrapper {
-    &,
-    li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
     display: flex;
     width: 100%;
     align-items: center;
     background-color: var(--tab-bar-background);
     border-radius: var(--tab-bar-border-radius);
     position: relative;
+
+    &,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
     & {
       padding: 0 3px;
