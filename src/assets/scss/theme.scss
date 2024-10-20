@@ -1,4 +1,4 @@
-@use '@/assets/scss/lib.scss' as *;
+$namespace: 'cc';
 
 :root {
   --#{$namespace}-colorText: rgba(0, 0, 0, 0.88);

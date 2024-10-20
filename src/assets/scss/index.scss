@@ -1,12 +1,10 @@
-@use '@/assets/scss/lib.scss' as *;
-@import '@/assets/scss/theme.scss';
-@import '@/assets/scss/reset.scss';
+@use '@/assets/scss/theme.scss' as *;
 
 html {
-  color: getCssVar('colorText');
+  color: var(--#{$namespace}-colorText);
 }
 
 body {
-  background-color: getCssVar('colorBgBase');
+  background-color: var(--#{$namespace}-colorBgBase);
   transition: background-color 0.2s ease;
 }

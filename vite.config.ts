@@ -28,6 +28,7 @@ export default defineConfig({
     }),
     Pages({
       dirs: 'src/pages',
+      resolver: 'vue',
       extensions: ['vue', 'md'],
     }),
   ],

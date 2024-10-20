@@ -37,10 +37,10 @@ const checked = computed(() => {
 </template>
 
 <style lang="scss">
-@use '@/assets/scss/lib.scss' as *;
+@use '@/assets/scss/theme.scss' as *;
 
 .dark {
-  @include b('appearance') {
+  .#{$namespace}-appearance {
     --switch-border-divider: #545454a6;
     --switch-bg-color: #3b3b3b;
     --switch-checked-color: #1a1a1a;
@@ -48,7 +48,7 @@ const checked = computed(() => {
   }
 }
 
-@include b('appearance') {
+.#{$namespace}-appearance {
   --switch-border-divider: #3c3c3c4a;
   --switch-bg-color: #f1f1f1;
   --switch-checked-color: #fff;
@@ -65,14 +65,6 @@ const checked = computed(() => {
     transition: border-color 0.25s;
 
     &[aria-checked='true'] {
-      $is-at-root: false !global;
-
-      @include e('check') {
-        transform: translate(var(--switch-translate-x));
-      }
-
-      $is-at-root: true !global;
-
       .sun {
         opacity: 0;
       }
@@ -83,7 +75,7 @@ const checked = computed(() => {
     }
   }
 
-  @include e('icon') {
+  &__icon {
     width: 18px;
     height: 18px;
 
@@ -97,7 +89,7 @@ const checked = computed(() => {
     }
   }
 
-  @include e('check') {
+  &__check {
     position: absolute;
     top: 1px;
     left: 1px;
@@ -109,6 +101,11 @@ const checked = computed(() => {
   }
 }
 
+.#{$namespace}-appearance
+  button[aria-checked='true']
+  .#{$namespace}-appearance__check {
+  transform: translate(var(--switch-translate-x));
+}
 .sun {
   opacity: 1;
 }

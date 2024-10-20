@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { ref, InputHTMLAttributes, watchEffect, onMounted } from 'vue'
+import type { InputHTMLAttributes } from 'vue'
+import { ref, watchEffect, onMounted } from 'vue'
 
 const props = defineProps({
   value: {
@@ -47,7 +48,7 @@ function handleInputChange(e: Event) {
     if (type !== 'insertFromPaste') formatVal(internalValue.value)
   }
 }
-function formatVal(formatValue) {
+function formatVal(formatValue: string) {
   let value = formatValue.split(',').join('')
   const reg = value.includes('.')
     ? /(?!^)(?=(\d{3})+\.)/g
