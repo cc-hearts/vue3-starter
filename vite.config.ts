@@ -5,6 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-layouts'
+import Progress from 'vite-plugin-progress'
 import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
@@ -24,7 +25,7 @@ export default defineConfig((args) => {
       }),
       AutoImport({
         imports: ['vue', 'vue-router'],
-        dts: './auto-imports.d.ts',
+        dts: './src/types/auto-imports.d.ts',
         eslintrc: {
           enabled: true,
         },
@@ -34,6 +35,7 @@ export default defineConfig((args) => {
       Layouts({
         layoutsDirs: 'src/layouts',
       }),
+      Progress(),
       VueI18n({
         runtimeOnly: true,
         compositionOnly: true,
@@ -57,5 +59,6 @@ export default defineConfig((args) => {
         },
       },
     },
+    optimizeDeps: { include: [], exclude: [] },
   }
 })
