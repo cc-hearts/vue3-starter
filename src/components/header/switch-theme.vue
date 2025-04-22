@@ -28,8 +28,8 @@ const checked = computed(() => {
           class="relative block overflow-hidden rounded-full"
           :class="[cssNs.e('icon')]"
         >
-          <Icons name="sun" />
-          <Icons name="moon" />
+          <Icons v-if="checked" name="sun" />
+          <Icons v-else name="moon" />
         </span>
       </span>
     </button>
