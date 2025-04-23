@@ -10,7 +10,7 @@ const [theme] = useTheme()
 function handleToggleTheme() {
   useToggleTheme()
 }
-const checked = computed(() => {
+const isDark = computed(() => {
   return theme.value === THEME.DARK
 })
 </script>
@@ -20,7 +20,7 @@ const checked = computed(() => {
     <button
       role="switch"
       class="relative block shrink-0 outline-0"
-      :aria-checked="checked"
+      :aria-checked="isDark"
       @click="handleToggleTheme"
     >
       <span :class="[cssNs.e('check')]">
@@ -28,7 +28,7 @@ const checked = computed(() => {
           class="relative block overflow-hidden rounded-full"
           :class="[cssNs.e('icon')]"
         >
-          <Icons v-if="checked" name="sun" />
+          <Icons v-if="!isDark" name="sun" />
           <Icons v-else name="moon" />
         </span>
       </span>
