@@ -11,7 +11,9 @@ declare module 'vue' {
     SvgIcon: import('vue').DefineComponent<
       {
         name: {
-          type: import('vue').PropType<'github' | 'moon' | 'sun'>
+          type: import('vue').PropType<
+            'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun'
+          >
           default: string
           required: true
         }
@@ -30,14 +32,16 @@ declare module 'vue' {
       Readonly<
         import('vue').ExtractPropTypes<{
           name: {
-            type: import('vue').PropType<'github' | 'moon' | 'sun'>
+            type: import('vue').PropType<
+              'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun'
+            >
             default: string
             required: true
           }
         }>
       >,
       {
-        name: 'github' | 'moon' | 'sun'
+        name: 'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun'
       }
     >
   }

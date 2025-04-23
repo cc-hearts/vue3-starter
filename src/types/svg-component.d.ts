@@ -7,20 +7,20 @@
 declare module '~virtual/svg-component' {
   const SvgIcon: import("vue").DefineComponent<{
       name: {
-          type: import("vue").PropType<'github' | 'moon' | 'sun'>;
+          type: import("vue").PropType<'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun'>;
           default: string;
           required: true;
       };
   }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
       name: {
-          type: import("vue").PropType<'github' | 'moon' | 'sun'>;
+          type: import("vue").PropType<'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun'>;
           default: string;
           required: true;
       };
   }>>, {
-      name: 'github' | 'moon' | 'sun';
+      name: 'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun';
   }>;
-  export const svgNames: ['github','moon','sun'];
-  export type SvgName = 'github' | 'moon' | 'sun';
+  export const svgNames: ['github','moon-1','moon','sun-1','sun'];
+  export type SvgName = 'github' | 'moon-1' | 'moon' | 'sun-1' | 'sun';
   export default SvgIcon;
 }
