@@ -2,7 +2,7 @@
 import { githubUrl } from '@/configs'
 import { defineCssNamespace } from '@/hooks'
 import Icons from '@/components/icon/icon.vue'
-import SwitchTheme from './switch-theme.vue'
+import SwitchTheme1 from './switch-theme-1.vue'
 
 const cssNs = defineCssNamespace('header')
 
@@ -20,7 +20,7 @@ const toGithub = () => githubUrl && window.open(githubUrl)
     <div class="flex items-center text-2xl" :class="[cssNs.e('icon')]">
       <slot name="right-icon" />
       <Icons name="github" @click="toGithub" />
-      <SwitchTheme />
+      <SwitchTheme1 />
     </div>
   </header>
 </template>
@@ -40,15 +40,6 @@ const toGithub = () => githubUrl && window.open(githubUrl)
     & > button,
     & > svg {
       margin: 0 0.5rem;
-    }
-
-    svg {
-      cursor: pointer;
-      transition: color 0.3s;
-
-      &:hover {
-        color: getCssVar('colorText');
-      }
     }
   }
 }

@@ -5,6 +5,6 @@ import { Button } from '@/components/ui/button'
 <template>
   <div>
     <h1 class="py-4">home page</h1>
-    <Button>123</Button>
+    <Button class="cursor-pointer"> 123 </Button>
   </div>
 </template>

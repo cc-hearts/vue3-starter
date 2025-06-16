@@ -2,5 +2,5 @@
 import Icon from '@/components/icon/icon.vue'
 </script>
 <template>
-  <Icon name="bar" />
+  <Icon name="moon-1" />
 </template>

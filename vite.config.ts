@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import VueRouter from 'unplugin-vue-router/vite'
@@ -7,8 +8,9 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Progress from 'vite-plugin-progress'
 import AutoImport from 'unplugin-auto-import/vite'
 import ViteImagemin from 'vite-plugin-imagemin'
-import SvgComponent from 'unplugin-svg-component/vite'
 import tailwindcss from '@tailwindcss/vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig((args) => {
@@ -32,13 +34,7 @@ export default defineConfig((args) => {
           optimizationLevel: 7,
         },
       }),
-      SvgComponent({
-        iconDir: ['./src/assets/svgs'],
-        componentStyle: '',
-        dts: false,
-        preserveColor: /fill\.svg$/,
-        dtsDir: './src/types',
-      }),
+      tailwindcss(),
       AutoImport({
         imports: ['vue', 'vue-router'],
         dts: './src/types/auto-imports.d.ts',
@@ -50,6 +46,7 @@ export default defineConfig((args) => {
         layoutsDirs: 'src/layouts',
       }),
       Progress(),
+      VueJsx(),
       VueI18n({
         runtimeOnly: true,
         compositionOnly: true,
@@ -59,6 +56,12 @@ export default defineConfig((args) => {
         importMode: 'async',
         extensions: ['.vue', '.tsx'],
         routesFolder: [{ src: 'src/pages' }],
+      }),
+      createSvgIconsPlugin({
+        iconDirs: [resolve(process.cwd(), 'src/assets/svgs')], // icon存放的目录
+        symbolId: 'icon-[name]', // symbol的id
+        inject: 'body-last', // 插入的位置
+        customDomId: '__svg__icons__dom__', // svg的id
       }),
     ],
     resolve: {

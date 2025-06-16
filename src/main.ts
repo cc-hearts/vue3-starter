@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import '@/assets/scss/tw.css'
 import '@/assets/scss/index.scss'
-import './modules/i18n'
+import 'virtual:svg-icons-register'
 import { initTheme } from '@/hooks'
 import type { Fn } from '@cc-heart/utils/helper'
 interface Modules {

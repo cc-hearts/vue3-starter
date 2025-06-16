@@ -1,4 +1,4 @@
-import type { SvgName } from '~virtual/svg-component'
+import type { SvgName } from '@/types/svg-name.d.ts'
 export interface IconProps {
   name: SvgName
 }
