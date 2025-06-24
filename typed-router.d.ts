@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/icons': RouteRecordInfo<'/icons', '/icons', Record<never, never>, Record<never, never>>,
     '/input': RouteRecordInfo<'/input', '/input', Record<never, never>, Record<never, never>>,
     '/loading': RouteRecordInfo<'/loading', '/loading', Record<never, never>, Record<never, never>>,
+    '/lottiy': RouteRecordInfo<'/lottiy', '/lottiy', Record<never, never>, Record<never, never>>,
     '/message': RouteRecordInfo<'/message', '/message', Record<never, never>, Record<never, never>>,
     '/tabs': RouteRecordInfo<'/tabs', '/tabs', Record<never, never>, Record<never, never>>,
   }
