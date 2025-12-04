@@ -10,13 +10,13 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+const emits = defineEmits(['complete'])
 const duration = props.duration ?? 6
 const repeat = props.repeat ?? 12
 const isRolling = ref(false)
 const currentTarget = ref(props.target)
 const currentRepeat = ref(repeat)
 const motionKey = ref(0)
-
 const columns = computed(() => {
   const arr = []
   for (let i = 0; i < 1; i++) {
@@ -60,6 +60,10 @@ function stop(target?: number) {
 }
 
 defineExpose({ start, stop })
+
+const handleAnimationLayout = () => {
+  emits('complete')
+}
 </script>
 
 <template>
@@ -69,8 +73,9 @@ defineExpose({ start, stop })
         <Motion
           :key="motionKey"
           :initial="{ y: 0 }"
-          :animate="isRolling ? { y: -getTargetOffset(idx) } : { y: 0 }"
+          :animate="isRolling ? { y: -getTargetOffset(idx) } : undefined"
           :transition="{ duration, ease: 'easeInOut' }"
+          @animation-complete="handleAnimationLayout"
         >
           <div class="slot-items">
             <div v-for="(num, nIdx) in col" :key="nIdx" class="slot-item">
